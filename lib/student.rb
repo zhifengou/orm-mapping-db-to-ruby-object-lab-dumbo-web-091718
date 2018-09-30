@@ -69,7 +69,7 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE grade < 12;
     SQL
-     DB[:conn].execute(sql)[0]
+     DB[:conn].execute(sql).flatten
   end
   
   
