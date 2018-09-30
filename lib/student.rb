@@ -102,6 +102,6 @@ class Student
       FROM students
       WHERE grade = #{x}
     SQL
-    DB[:conn].execute(sql)[0]
+    DB[:conn].execute(sql)[0][0]
 end
 end
