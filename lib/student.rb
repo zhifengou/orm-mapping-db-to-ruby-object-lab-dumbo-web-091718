@@ -27,7 +27,7 @@ class Student
     sql=<<-SQL 
       SELECT * FROM students WHERE name=?
       SQL
-      rows=DB[:conn].execute(sql,name)
+      rows=DB[:conn].execute(sql,name)[0]
       self.new_from_db(rows)
       
   end
