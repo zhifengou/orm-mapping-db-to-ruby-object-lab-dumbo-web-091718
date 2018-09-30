@@ -16,7 +16,7 @@ class Student
             SELECT * FROM students
           SQL
       rows=DB[:conn].execute(sql)
-      rows.map do |row|
+    rows.map do |row|
       self.new_from_db(row)
     end
   end
