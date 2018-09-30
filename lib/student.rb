@@ -105,6 +105,5 @@ class Student
       WHERE grade = #{x}
     SQL
     DB[:conn].execute(sql)[0]
-  
 end
 end
