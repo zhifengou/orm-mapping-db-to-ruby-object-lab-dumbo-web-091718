@@ -28,7 +28,9 @@ class Student
       SELECT * FROM students WHERE name=?
       SQL
       rows=DB[:conn].execute(sql,name).flatten
-      self.new_from_db(rows)
+       rows.map do |row|
+     self.new_from_db(row)
+    end
       
   end
   
